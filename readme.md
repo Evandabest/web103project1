@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='public/Kapture 2024-09-26 at 00.15.56.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='public/Kapture 2024-09-26 at 00.15.56.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with
