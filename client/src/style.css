@@ -17,6 +17,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  background-image: url('path_to_your_pokemon_background_image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,6 +31,24 @@ a {
 a:hover {
   color: #535bf2;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.center-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 
 body {
   margin: 0;

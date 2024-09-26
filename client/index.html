@@ -1,13 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Pokémon Scouter</title>
+    <link href="dist/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-white">
+    <header
+      class="w-full h-48 bg-cover bg-center mb-8"
+      style="
+        background-image: url('https://lh3.googleusercontent.com/II6O2TzFbdddoPO7NUlwDcY9ydUKJQ-RUHbQ_haJAKfdkx9km51cUPttr1Jx2whBwSAvSioktdBia7FtbKbshtuoUydGA_F95rPJnljYnQb2Pg=e365-w1920');
+      "
+    >
+      <div class="container mx-auto h-full flex items-center justify-center">
+        <h1 class="text-6xl font-bold text-white">Pokémon Scouter</h1>
+      </div>
+    </header>
+    <main class="container mx-auto px-4">
+      <div id="app" class="grid grid-cols-2 md:grid-cols-3 gap-8"></div>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

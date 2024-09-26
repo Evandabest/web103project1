@@ -1,10 +1,19 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import cors from 'cors';
 
+import { characters } from './db';
 const app = express();
 const port = 3000;
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, TypeScript with Express!');
+app.use(cors()); // Enable CORS for all routes
+
+app.get('/characters', (req, res) => {
+  res.json(characters);
+});
+
+app.get('/characters/:character', (req, res) => {
+  const character = characters.find((character) => character.name === req.params.character);
+  res.json(character);
 });
 
 app.listen(port, () => {
