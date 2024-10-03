@@ -38,19 +38,19 @@ async function fetchData() {
             const img = document.createElement('img');
             img.src = pokemon.link;
             img.alt = pokemon.name;
-            img.className = 'w-48 h-48 mt-4 mb-2 m-auto object-cover';
+            img.className = 'object-cover w-48 h-48 m-auto mt-4 mb-2';
             
             const cardBody = document.createElement('div');
             cardBody.className = 'p-4';
             
             const name = document.createElement('h2');
-            name.className = 'font-bold text-black text-xl mb-2';
+            name.className = 'mb-2 text-xl font-bold text-black';
             name.textContent = pokemon.name;
 
             // Create a link that routes to /pokemon/:name
             const link = document.createElement('a');
             link.href = `/pokemon/${pokemon.name}`;
-            link.className = 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-2 rounded block text-center';
+            link.className = 'block px-4 py-2 mb-2 font-bold text-center text-white bg-blue-500 rounded hover:bg-blue-700';
             link.textContent = 'Learn More';
 
             // Add click event listener to change the URL dynamically
@@ -86,7 +86,7 @@ async function displaySinglePokemon(characterName: string | undefined) {
 
       // Create a centered card with more space and larger size
       const cardContainer = document.createElement('div');
-      cardContainer.className = 'flex justify-center m-auto justify-center items-center min-h-screen';  // Center card horizontally and vertically
+      cardContainer.className = 'flex items-center justify-center min-h-screen m-auto';  // Center card horizontally and vertically
 
       const card = document.createElement('div');
       card.className = 'bg-gray-100 w-[70vw] h-[80vh] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center p-8';  // Larger card with padding
@@ -94,25 +94,25 @@ async function displaySinglePokemon(characterName: string | undefined) {
       const img = document.createElement('img');
       img.src = data.link;
       img.alt = data.name;
-      img.className = 'w-72 h-72 mt-4 mb-8 object-cover';  // Larger image, adjust width and height
+      img.className = 'object-cover mt-4 mb-8 w-72 h-72';  // Larger image, adjust width and height
 
       const cardBody = document.createElement('div');
       cardBody.className = 'text-center';
 
       const name = document.createElement('h2');
-      name.className = 'font-bold text-black text-3xl mb-4';  // Bigger title
+      name.className = 'mb-4 text-3xl font-bold text-black';  // Bigger title
       name.textContent = data.name;
 
       const type = document.createElement('p');
-      type.className = 'text-gray-700 text-xl mb-4';  // Increase font size
+      type.className = 'mb-4 text-xl text-gray-700';  // Increase font size
       type.textContent = `Type: ${data.type}`;
 
       const description = document.createElement('p');
-      description.className = 'text-gray-700 text-lg mb-8';  // Larger description
+      description.className = 'mb-8 text-lg text-gray-700';  // Larger description
       description.textContent = data.description;
 
       const backButton = document.createElement('button');
-      backButton.className = 'bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded';  // Larger back button
+      backButton.className = 'px-6 py-3 font-bold text-white bg-red-500 rounded hover:bg-red-700';  // Larger back button
       backButton.textContent = 'Go Back';
       
       // Add back button event to go back to the list view

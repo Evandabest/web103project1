@@ -1,4 +1,37 @@
 
+const dotenv = require('dotenv')
+
+dotenv.config()
+
+const pg = require('pg')
+
+//const config = {
+//    //user: process.env.PGUSER,
+//    //password: process.env.PGPASSWORD,
+//    //host: process.env.PGHOST,
+//    //port: process.env.PGPORT,
+//    //database: process.env.PGDATABASE
+//    connectionString: process.env.PGCONNECTIONSTRING
+//}
+//
+//
+//const pool = new pg.Pool(config)
+//module.exports = { pool }
+//
+//export async function getAllPokemon(): Promise<pokemon[]> {
+//    const client = await pool.connect();
+//    try {
+//        const res = await client.query('SELECT * FROM pokemon');
+//        console.log(res)
+//        return res.rows;
+//    } finally {
+//        client.release();
+//    }
+//}
+//
+//module.exports = { pool, getAllPokemon };
+
+
 interface pokemon {
     name: string
     type: string
